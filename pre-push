@@ -1,0 +1,8 @@
+echo "---> CS: Iniciando validações de pré push"
+	bundle exec fastlane ios pre_push
+echo "---> CS: Finalizando validações de pré push"
+
+echo "---> CS: Adicionando arquivos após validação de pré push"
+	exec git add .
+	exec commit -m "changes with synx"
+echo "---> CS: Finalizando adicionamento de arquivos após validação de pré push"
